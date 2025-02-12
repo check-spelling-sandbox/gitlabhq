@@ -112,7 +112,7 @@ image: [-\w./:@]+
 # hit-count: 46 file-count: 29
 # Alternative printf
 # %s
-%(?:s(?=[a-z]{2,}))(?!%)(?=[_a-zA-Z]+(?!%[^s])\b)(?=.*?['"])
+%(?:s(?!mall|trong)(?=[a-z]{2,}))(?!%)(?=[_a-zA-Z]+(?!%[^s])\b)(?=.*?['"])
 
 # hit-count: 38 file-count: 10
 # in check-spelling@v0.0.22+, printf markers aren't automatically consumed

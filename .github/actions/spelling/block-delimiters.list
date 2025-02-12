@@ -10,6 +10,26 @@
 -----BEGIN RSA PRIVATE KEY-----
 -----END RSA PRIVATE KEY-----
 
+# false positive
+Don't paste the private part of the GPG key
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+# false positive
+Debian distributions read endpoint
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+# false positive
+Debian packages read endpoint
+-----BEGIN PGP SIGNATURE-----
+
+# false positive
+expect(response.keys).to contain_exactly(:private_key, :public_key, :fingerprint, :passphrase)
+expect(response[:fingerprint].length).to eq(40)
+
+# false positive
+is_expected.to validate_presence_of(:public_key)
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
 # potential false positive
 def private_key_armored
 -----BEGIN PGP PRIVATE KEY BLOCK-----
