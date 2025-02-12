@@ -252,7 +252,7 @@
 \b[Nn]o[nt][- ]existent\b
 
 # Should be `@brief` / `@details` / `@param` / `@return` / `@retval`
-(?:^\s*|(?:\*|//|/*)\s+`)[\\@](?:breif|(?:detail|detials)|(?:params(?!\.)|prama?)|ret(?:uns?)|retvl)\b
+(?:^\s*|(?:\*|//|/*)\s+`)[\\@](?:breif|(?:detail|detials)|(?:params(?!\.)|prama?)|ret(?:uns?)|retvl)\b(?! =)
 
 # Should be `preexisting`
 [Pp]re[- ]existing
