@@ -1,5 +1,228 @@
 # See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
 
+# Automatically suggested patterns
+
+# hit-count: 46759 file-count: 12633
+# https/http/file urls
+(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/*%?=~_|!:,.;]+[-A-Za-z0-9+&@#/*%=~_|]
+
+# hit-count: 4316 file-count: 1184
+# hex runs
+\b[0-9a-fA-F]{16,}\b
+
+# hit-count: 3616 file-count: 3516
+# node packages
+(["'])@[^/'" ]+/[^/'" ]+\g{-1}
+
+# hit-count: 1527 file-count: 470
+# Markdown anchor links
+\(#\S*?[a-zA-Z]\S*?\)
+
+# hit-count: 1430 file-count: 303
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|%23|&H)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
+
+# hit-count: 1085 file-count: 756
+# scala imports
+^import (?:[\w.]|\{\w*?(?:,\s*(?:\w*|\*))+\})+
+
+# hit-count: 849 file-count: 187
+# URL escaped characters
+%[0-9A-F][A-F](?=[A-Za-z])
+
+# hit-count: 734 file-count: 245
+# alternate printf markers if you run into latex and friends
+(?<!\\)\\[nrt](?=[a-z]{2,})(?=.*['"`])
+
+# hit-count: 438 file-count: 105
+# libraries
+(?:\b|_)lib(?:re(?=office)|)(?!era[lt]|ero|erty|rar(?:i(?:an|es)|y))(?=[a-z])
+
+# hit-count: 437 file-count: 44
+# Alternatively, if you're using check-spelling v0.0.25+, and you would like to _check_ the Non-English content for spelling errors, you can. For information on how to do so, see:
+# https://docs.check-spelling.dev/Feature:-Configurable-word-characters.html#unicode
+[a-zA-Z]*[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3}[a-zA-ZÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]*|[a-zA-Z]{3,}[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]|[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3,}
+
+# hit-count: 227 file-count: 94
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+
+# hit-count: 173 file-count: 42
+# perl regex test
+[!=]~ (?:/.*/|m\{.*?\}|m<.*?>|m([|!/@#,;']).*?\g{-1})
+
+# hit-count: 142 file-count: 90
+# container images
+image: [-\w./:@]+
+
+# hit-count: 117 file-count: 44
+# base64 encoded json
+\beyJ[-a-zA-Z=;:/0-9+]+
+
+# hit-count: 102 file-count: 1
+# GitHub JSON
+"node_id": "[-a-zA-Z=;:/0-9+_]*"
+
+# hit-count: 56 file-count: 19
+# css fonts
+\bfont-family:[^;}]+
+
+# hit-count: 54 file-count: 10
+# ANSI color codes
+(?:\\(?:u00|x)1[Bb]|\\03[1-7]|\x1b|\\u\{1[Bb]\})\[\d+(?:;\d+)*m
+
+# hit-count: 51 file-count: 33
+# tar arguments
+\b(?:\\n|)g?tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[ABGJMOPRSUWZacdfh-pr-xz]+\b)(?:=[^ ]*|))+
+
+# hit-count: 51 file-count: 26
+# ssh
+(?:ssh-\S+|-nistp256) [-a-zA-Z=;:/0-9+]{12,}
+
+# hit-count: 50 file-count: 47
+# assign regex
+= /[^*].*?(?:[a-z]{3,}|[A-Z]{3,}|[A-Z][a-z]{2,}).*/[gi]?(?=\W|$)
+
+# hit-count: 46 file-count: 29
+# Alternative printf
+# %s
+%(?:s(?=[a-z]{2,}))(?!%)(?=[_a-zA-Z]+(?!%[^s])\b)(?=.*?['"])
+
+# hit-count: 34 file-count: 9
+# Go regular expressions
+regexp?\.MustCompile\((?:`[^`]*`|".*"|'.*')\)
+
+# hit-count: 32 file-count: 2
+# font awesome classes
+\.fa-[-a-z0-9]+
+
+# hit-count: 30 file-count: 21
+# nolint
+nolint:\s*\w+
+
+# hit-count: 24 file-count: 15
+# IServiceProvider / isAThing
+(?:\b|_)(?:(?:ns|)I|isA)(?=(?:[A-Z][a-z]{2,})+(?:[A-Z\d]|\b))
+
+# hit-count: 13 file-count: 10
+# git index header
+index (?:[0-9a-z]{7,40},|)[0-9a-z]{7,40}\.\.[0-9a-z]{7,40}
+
+# hit-count: 13 file-count: 10
+# signed off by
+(?i)Signed-off-by: .*
+
+# hit-count: 12 file-count: 8
+# css url wrappings
+\burl\([^)]+\)
+
+# hit-count: 11 file-count: 4
+# pom.xml
+<(?:group|artifact)Id>.*?<
+
+# hit-count: 9 file-count: 8
+# Docker images
+^\s*FROM\s+\S+:\S+(?:\s+AS\s+\S+|)
+
+# hit-count: 9 file-count: 4
+# Time Zones
+\b(?:Africa|Atlantic|America|Antarctica|Arctic|Asia|Australia|Europe|Indian|Pacific)(?:/[-\w]+)+
+
+# hit-count: 6 file-count: 3
+# integrity
+integrity=(['"])(?:\s*sha\d+-[-a-zA-Z=;:/0-9+]{40,})+\g{-1}
+
+# hit-count: 5 file-count: 5
+# javascript match regex
+\.match\(/[^/\s"]{3,}/[gim]*\s*
+
+# hit-count: 5 file-count: 5
+# kubernetes crd patterns
+^\s*pattern: .*$
+
+# hit-count: 5 file-count: 4
+# Punycode
+\bxn--[-0-9a-z]+
+
+# hit-count: 5 file-count: 1
+# #includes
+^\s*#include\s*(?:<.*?>|".*?")
+
+# hit-count: 5 file-count: 1
+# #includes
+^\s*#include\s*(?:<.*?>|".*?")
+
+# hit-count: 4 file-count: 2
+# kubernetes object suffix
+-[0-9a-f]{10}-\w{5}\s
+
+# hit-count: 4 file-count: 1
+# tput arguments -- https://man7.org/linux/man-pages/man5/terminfo.5.html -- technically they can be more than 5 chars long...
+\btput\s+(?:(?:-[SV]|-T\s*\w+)\s+)*\w{3,5}\b
+
+# hit-count: 3 file-count: 2
+# go.sum
+\bh1:\S+
+
+# hit-count: 3 file-count: 2
+# go install
+go install(?:\s+[a-z]+\.[-@\w/.]+)+
+
+# hit-count: 3 file-count: 2
+# kubernetes pod status lists
+# https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-phase
+\w+(?:-\w+)+\s+\d+/\d+\s+(?:Running|Pending|Succeeded|Failed|Unknown)\s+
+
+# hit-count: 2 file-count: 2
+# Slack url
+slack://[a-zA-Z0-9?&=]+
+
+# hit-count: 2 file-count: 2
+# JavaScript regular expressions
+# javascript test regex
+/.{3,}/[gim]*\.test\(
+
+# hit-count: 2 file-count: 2
+# javascript replace regex
+\.replace\(/[^/\s"]{3,}/[gim]*\s*,
+
+# hit-count: 2 file-count: 1
+# scrypt / argon
+\$(?:scrypt|argon\d+[di]*)\$\S+
+
+# hit-count: 2 file-count: 1
+# base64 encoded pkcs
+\bMII[-a-zA-Z=;:/0-9+]+
+
+# hit-count: 1 file-count: 1
+# patch hunk comments
+^@@ -\d+(?:,\d+|) \+\d+(?:,\d+|) @@ .*
+
+# hit-count: 1 file-count: 1
+# file permissions
+['"`\s][-bcdLlpsw](?:[-r][-w][-Ssx]){2}[-r][-w][-SsTtx]\+?['"`\s]
+
+# hit-count: 1 file-count: 1
+# GitHub actions
+\buses:\s+[-\w.]+/[-\w./]+@[-\w.]+
+
+# hit-count: 1 file-count: 1
+# C# includes
+^\s*using [^;]+;
+
+# hit-count: 1 file-count: 1
+# crypt
+(['"])\$2[ayb]\$.{56}\g{-1}
+
+# hit-count: 1 file-count: 1
+# perl run
+perl(?:\s+-[a-zA-Z]\w*)+
+
+# hit-count: 1 file-count: 1
+# encoded-word
+=\?[-a-zA-Z0-9"*%]+\?[BQ]\?[^?]{0,75}\?=
+
+
 # Questionably acceptable forms of `in to`
 # Personally, I prefer `log into`, but people object
 # https://www.tprteaching.com/log-into-log-in-to-login/
