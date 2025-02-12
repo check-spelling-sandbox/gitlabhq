@@ -10,6 +10,18 @@
 -----BEGIN RSA PRIVATE KEY-----
 -----END RSA PRIVATE KEY-----
 
+# potential false positive
+def private_key_armored
+-----BEGIN PGP PRIVATE KEY BLOCK-----
+
+# PGP Private Key
+-----BEGIN PGP PRIVATE KEY BLOCK-----
+-----END PGP PRIVATE KEY BLOCK-----
+
+# false positive
+def public_key_armored
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
 # GPG Public Key
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 -----END PGP PUBLIC KEY BLOCK-----
