@@ -217,6 +217,9 @@ jobs:
             cspell1:clojure/clojure.txt
             cspell1:elixir/elixir.txt
             cspell1:lisp/lisp.txt
+            cspell1:rust/rust.txt
+            cspell1:cryptocurrencies/cryptocurrencies.txt
+            cspell1:companies/companies.txt
 
   comment-push:
     name: Report (Push)
