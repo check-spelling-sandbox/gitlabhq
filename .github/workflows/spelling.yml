@@ -197,6 +197,26 @@ jobs:
             cspell1:python/python/python.txt
             cspell1:java/java.txt
             cspell1:fonts/fonts.txt
+            cspell1:k8s/k8s.txt
+            cspell1:css/css.txt
+            cspell1:java/java-terms.txt
+            cspell1:r/r.txt
+            cspell1:mnemonics/mnemonics.txt
+            cspell1:sql/sql.txt
+            cspell1:cpp/stdlib-cpp.txt
+            cspell1:scala/scala.txt
+            cspell1:cpp/stdlib-c.txt
+            cspell1:dotnet/dotnet.txt
+            cspell1:latex/latex.txt
+            cspell1:monkeyc/monkeyc_keywords.txt
+            cspell1:cpp/ecosystem.txt
+            cspell1:docker/docker-words.txt
+            cspell1:lua/lua.txt
+            cspell1:powershell/powershell.txt
+            cspell1:software-terms/webServices.txt
+            cspell1:clojure/clojure.txt
+            cspell1:elixir/elixir.txt
+            cspell1:lisp/lisp.txt
 
   comment-push:
     name: Report (Push)
